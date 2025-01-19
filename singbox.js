@@ -17,7 +17,7 @@ config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
   if (['all', 'all-auto'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /?!(test)))
+    i.outbounds.push(...getTags(proxies, /(?!(test))))
   }
   if (['hk', 'hk-auto'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i))
