@@ -35,7 +35,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /美|us|unitedstates|united states|🇺🇸/i))
   }
   if (['home' 'home-auto'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /test/i))
+    i.outbounds.push(...getTags(proxies, /tes/i))
   }
 })
 
